@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.10-rc-management
+
+  gamesshop.gateway:
+    image: ${DOCKER_REGISTRY-}gamesshopgateway 
+    container_name: games-shop.gateway
+    build:
+      context: .
+      dockerfile: GamesShop.Gateway/Dockerfile
+    environment:
+        - identityServerConnectionString=http://identity-server:5000

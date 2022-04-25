@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Gateway", "GamesShop.Gateway\GamesShop.Gateway.csproj", "{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{03E1C218-7DE9-4582-950C-27474491FE94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.IdentityServer", "GamesShop.IdentityServer\GamesShop.IdentityServer.csproj", "{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E1C218-7DE9-4582-950C-27474491FE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E1C218-7DE9-4582-950C-27474491FE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E1C218-7DE9-4582-950C-27474491FE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E1C218-7DE9-4582-950C-27474491FE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
