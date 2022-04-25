@@ -11,4 +11,14 @@ services:
       context: .
       dockerfile: GamesShop.Gateway/Dockerfile
     environment:
-        - identityServerConnectionString=http://identity-server:5000
+        - identityServerConnectionString=http://games-shop.identity-server:5000
+
+  gamesshop.identityserver:
+    image: ${DOCKER_REGISTRY-}gamesshopidentityserver
+    container_name: games-shop.identity-server
+    ports:
+      - "5000:80"
+    build:
+      context: .
+      dockerfile: GamesShop.IdentityServer/Dockerfile
+
