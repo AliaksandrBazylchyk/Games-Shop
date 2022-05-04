@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Gateway", "GamesShop.Gateway\GamesShop.Gateway.csproj", "{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Gateway", "GamesShop.Gateway\GamesShop.Gateway.csproj", "{FBD9A5E3-EF91-4A87-87AD-D40556D0EB00}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{03E1C218-7DE9-4582-950C-27474491FE94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.IdentityServer", "GamesShop.IdentityServer\GamesShop.IdentityServer.csproj", "{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.IdentityServer", "GamesShop.IdentityServer\GamesShop.IdentityServer.csproj", "{6C5A9613-AF5D-4DDC-89C6-D18F9497F38F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Common", "GamesShop.Common\GamesShop.Common.csproj", "{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Common", "GamesShop.Common\GamesShop.Common.csproj", "{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.API", "GamesShop.Catalog.API\GamesShop.Catalog.API.csproj", "{A1994458-D624-4B02-9090-BA635BAF4C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.DAL", "GamesShop.Catalog.DAL\GamesShop.Catalog.DAL.csproj", "{57953FD0-278E-4B02-BA4D-914F5CE7B08E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.BLL", "GamesShop.Catalog.BLL\GamesShop.Catalog.BLL.csproj", "{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1994458-D624-4B02-9090-BA635BAF4C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1994458-D624-4B02-9090-BA635BAF4C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1994458-D624-4B02-9090-BA635BAF4C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1994458-D624-4B02-9090-BA635BAF4C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57953FD0-278E-4B02-BA4D-914F5CE7B08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57953FD0-278E-4B02-BA4D-914F5CE7B08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57953FD0-278E-4B02-BA4D-914F5CE7B08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57953FD0-278E-4B02-BA4D-914F5CE7B08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
