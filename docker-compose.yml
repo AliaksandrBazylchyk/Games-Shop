@@ -1,0 +1,73 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.10-rc-management
+
+  gamesshop.gateway:
+    image: ${DOCKER_REGISTRY-}gamesshopgateway 
+    container_name: games-shop.gateway
+    build:
+      context: .
+      dockerfile: GamesShop.Gateway/Dockerfile
+    environment:
+        - identityServerConnectionString=http://games-shop.identity-server:5000
+
+  gamesshop.identityserver:
+    image: ${DOCKER_REGISTRY-}gamesshopidentityserver
+    container_name: games-shop.identity-server
+    ports:
+      - "5000:80"
+    build:
+      context: .
+      dockerfile: GamesShop.IdentityServer/Dockerfile
+
+
+  gamesshop.catalog.api:
+    image: ${DOCKER_REGISTRY-}gamesshopcatalogapi
+    container_name: games-shop.catalog-api
+    # development
+    ports:
+      - "8000:80"
+    build:
+      context: .
+      dockerfile: GamesShop.Catalog.API/Dockerfile
+    environment:
+        - mongoDBConnectionString=mongo-database
+        - mongoDataBaseName=games-shop
+    networks:
+        - mongo-express-network
+  
+  mongodb:
+    image: mongo
+    container_name: mongo-database
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_DATA_DIR=/data/db
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - mongo-express-network
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    container_name: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
+      - ME_CONFIG_MONGODB_SERVER=mongo-database
+    networks:
+      - mongo-express-network
+    depends_on:
+      - mongo-database
+
+networks:
+  mongo-express-network:
+    name: mongo-express-network
+
+volumes:
+  mongodb-data:
