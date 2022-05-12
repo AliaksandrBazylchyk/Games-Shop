@@ -1,4 +1,7 @@
 ﻿using GamesShop.Common.Configurations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 
 namespace GamesShop.Catalog.API.ServiceExtensions
 {
@@ -9,7 +12,6 @@ namespace GamesShop.Catalog.API.ServiceExtensions
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
                 .Build();
-
 
             services.Configure<MongoDBConfiguration>(options =>
             {

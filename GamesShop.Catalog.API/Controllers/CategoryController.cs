@@ -18,7 +18,7 @@ namespace GamesShop.Catalog.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAsync([FromQuery] Guid categoryId)
+        public async Task<IActionResult> GetAsync([FromQuery] string categoryId)
         {
             var response = await _categoryService.GetByIdAsync(categoryId);
 

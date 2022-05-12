@@ -4,6 +4,7 @@ namespace GamesShop.Catalog.DAL.Entities
 {
     public abstract class BaseEntity
     {
-        [BsonRequired] public Guid Id { get; set; }
+        [BsonId]
+        public string Guid { get; set; }
     }
 }

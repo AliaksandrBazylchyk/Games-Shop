@@ -1,7 +1,10 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace GamesShop.Catalog.DAL.Entities
 {
+    [Serializable]
     public class Item : BaseEntity
     {
         [BsonRequired] public Guid CategoryId { get; set; }

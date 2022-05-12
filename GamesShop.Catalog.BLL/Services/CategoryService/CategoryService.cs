@@ -14,9 +14,11 @@ namespace GamesShop.Catalog.BLL.Services.CategoryService
             _categoryRepository = categoryRepository;
         }
 
-        public async Task<Category> GetByIdAsync(Guid id)
+        public async Task<Category> GetByIdAsync(string id)
         {
-            return await _categoryRepository.GetByIdAsync(id);
+            var entity = await _categoryRepository.GetByIdAsync(id);
+
+            return entity;
         }
 
         public async Task<IEnumerable<Category>> GetAllAsync()
@@ -28,7 +30,7 @@ namespace GamesShop.Catalog.BLL.Services.CategoryService
         {
             var category = new Category
             {
-                Id = Guid.NewGuid(), 
+                Guid = Guid.NewGuid().ToString(), 
                 Name = name
             };
 

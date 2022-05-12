@@ -4,7 +4,7 @@ namespace GamesShop.Catalog.BLL.Services.CategoryService
 {
     public interface ICategoryService
     {
-        Task<Category> GetByIdAsync(Guid id);
+        Task<Category> GetByIdAsync(string id);
         Task<IEnumerable<Category>> GetAllAsync();
         Task<Category> CreateAsync(string name);
     }

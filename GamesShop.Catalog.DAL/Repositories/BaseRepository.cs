@@ -1,5 +1,6 @@
 ﻿using GamesShop.Catalog.DAL.Core;
 using GamesShop.Catalog.DAL.Entities;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace GamesShop.Catalog.DAL.Repositories
@@ -14,14 +15,21 @@ namespace GamesShop.Catalog.DAL.Repositories
         )
         {
             _context = context;
-            Collection = _context.GetCollectionByName<T>(nameof(T));
+            Collection = _context.GetCollectionByName<T>(typeof(T).Name);
         }
 
-        public async Task<T> GetByIdAsync(Guid id)
-        {
-            var entity = await Collection.FindAsync(x => x.Id == id);
 
-            return await entity.FirstOrDefaultAsync();
+        public async Task<T> GetByIdAsync(string id)
+        {
+            //var bsonId = BsonObjectId.Create(id);
+            //var filter = Builders<T>.Filter.Eq(doc => doc.Id, bsonId.AsGuid);
+            //var query = await Collection.FindAsync(filter);
+
+            //var entity = await query.SingleOrDefaultAsync();
+            var query = await Collection.FindAsync(_ => _.Guid == id);
+            var entity = await query.FirstOrDefaultAsync();
+
+            return entity;
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -32,19 +40,19 @@ namespace GamesShop.Catalog.DAL.Repositories
             return entities;
         }
 
-        public async Task<T> DeleteAsync(Guid id)
+        public async Task<T> DeleteAsync(string id)
         {
-            var entity = await Collection.FindOneAndDeleteAsync(x => x.Id == id);
+            var entity = await Collection.FindOneAndDeleteAsync(x => x.Guid == id);
 
             return entity;
         }
 
-        public async Task<T> UpdateAsync(Guid id, T entity)
+        public async Task<T> UpdateAsync(string id, T entity)
         {
             var result = await Collection.FindOneAndUpdateAsync(
-                x => x.Id == id, 
+                x => x.Guid == id,
                 new ObjectUpdateDefinition<T>(entity)
-                );
+            );
 
             return result;
         }
