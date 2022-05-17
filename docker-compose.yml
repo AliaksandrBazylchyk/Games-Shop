@@ -22,7 +22,6 @@ services:
       context: .
       dockerfile: GamesShop.IdentityServer/Dockerfile
 
-
   gamesshop.catalog.api:
     image: ${DOCKER_REGISTRY-}gamesshopcatalogapi
     container_name: games-shop.catalog-api
@@ -38,12 +37,14 @@ services:
     networks:
         - mongo-express-network
   
-  mongodb:
+  mongo-database:
     image: mongo
     container_name: mongo-database
     ports:
       - 27017:27017
     environment:
+      - MONGO_INITDB_ROOT_USERNAME=rootuser
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
       - MONGO_DATA_DIR=/data/db
     volumes:
       - mongodb-data:/data/db
@@ -65,9 +66,46 @@ services:
     depends_on:
       - mongo-database
 
+  postgres:
+    container_name: postgres-database
+    image: postgres:latest
+    user: root
+    environment:
+      POSTGRES_DB: "identity"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - postgres
+
+  pgadmin:
+    container_name: postgres-admin
+    image: dpage/pgadmin4:latest
+    user: root
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+    networks:
+      - postgres
+
 networks:
   mongo-express-network:
     name: mongo-express-network
+  postgres:
+    driver: bridge
 
 volumes:
   mongodb-data:
+  pgadmin-data:
+  postgres-data:
+    driver: local

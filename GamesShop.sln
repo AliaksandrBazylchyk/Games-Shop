@@ -11,11 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.IdentityServer", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Common", "GamesShop.Common\GamesShop.Common.csproj", "{FDB4A3F8-EA08-4A7B-9D20-61A9F516E520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.API", "GamesShop.Catalog.API\GamesShop.Catalog.API.csproj", "{A1994458-D624-4B02-9090-BA635BAF4C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Catalog.API", "GamesShop.Catalog.API\GamesShop.Catalog.API.csproj", "{A1994458-D624-4B02-9090-BA635BAF4C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.DAL", "GamesShop.Catalog.DAL\GamesShop.Catalog.DAL.csproj", "{57953FD0-278E-4B02-BA4D-914F5CE7B08E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Catalog.DAL", "GamesShop.Catalog.DAL\GamesShop.Catalog.DAL.csproj", "{57953FD0-278E-4B02-BA4D-914F5CE7B08E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.Catalog.BLL", "GamesShop.Catalog.BLL\GamesShop.Catalog.BLL.csproj", "{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.Catalog.BLL", "GamesShop.Catalog.BLL\GamesShop.Catalog.BLL.csproj", "{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesShop.UserManagement.API", "GamesShop.UserManagement.API\GamesShop.UserManagement.API.csproj", "{209CEE13-685F-44EC-8812-0191187D2BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.UserManagement.BLL", "GamesShop.UserManagement.BLL\GamesShop.UserManagement.BLL.csproj", "{990D1D82-1C96-4BA2-B58C-5E9F17732CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesShop.UserManagement.DAL", "GamesShop.UserManagement.DAL\GamesShop.UserManagement.DAL.csproj", "{C0D5F925-2B1C-4A02-B3AD-796E35372777}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DB82D7E-EF6A-4E58-884F-ACF84A6A658E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209CEE13-685F-44EC-8812-0191187D2BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209CEE13-685F-44EC-8812-0191187D2BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209CEE13-685F-44EC-8812-0191187D2BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209CEE13-685F-44EC-8812-0191187D2BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990D1D82-1C96-4BA2-B58C-5E9F17732CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990D1D82-1C96-4BA2-B58C-5E9F17732CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990D1D82-1C96-4BA2-B58C-5E9F17732CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990D1D82-1C96-4BA2-B58C-5E9F17732CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D5F925-2B1C-4A02-B3AD-796E35372777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D5F925-2B1C-4A02-B3AD-796E35372777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D5F925-2B1C-4A02-B3AD-796E35372777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D5F925-2B1C-4A02-B3AD-796E35372777}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
