@@ -1,5 +1,4 @@
 ﻿using Duende.IdentityServer.Models;
-using GamesShop.Common;
 using IdentityModel;
 
 namespace GamesShop.IdentityServer;
@@ -25,8 +24,8 @@ public static class Config
         {
             new Client
             {
-                ClientId = "FullClient",
-                ClientName = "My Custom Client",
+                ClientId = "Default",
+                ClientName = "Default Client",
                 AccessTokenLifetime = 60 * 60 * 24,
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 RequireClientSecret = false,

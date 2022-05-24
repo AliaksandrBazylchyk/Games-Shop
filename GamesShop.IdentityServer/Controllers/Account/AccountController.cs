@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
-using Duende.IdentityServer.Services;
-using Duende.IdentityServer.Stores;
 using GamesShop.Common;
-using GamesShop.IdentityServer.Models;
-using Microsoft.AspNetCore.Authentication;
+using GamesShop.IdentityServer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

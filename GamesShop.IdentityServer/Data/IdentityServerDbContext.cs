@@ -1,4 +1,4 @@
-﻿using GamesShop.IdentityServer.Models;
+﻿using GamesShop.IdentityServer.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

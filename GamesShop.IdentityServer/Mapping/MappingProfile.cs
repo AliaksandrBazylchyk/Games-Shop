@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using GamesShop.IdentityServer.Controllers.Account;
-using GamesShop.IdentityServer.Models;
+using GamesShop.IdentityServer.Entities;
 
 namespace GamesShop.IdentityServer.Mapping
 {

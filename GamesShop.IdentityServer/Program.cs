@@ -1,6 +1,7 @@
 using GamesShop.IdentityServer.Extensions;
 using Serilog;
 
+// Enable Serilog logger
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
