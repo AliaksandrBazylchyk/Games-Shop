@@ -1,0 +1,1 @@
+docker stop games-shop.catalog-api && docker rm games-shop.catalog-api && docker-compose up -d --build
