@@ -15,4 +15,6 @@
     <PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties ocelot_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>
